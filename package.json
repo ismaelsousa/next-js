@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "server":"npx json-server db.json -p 3333 -w"
+    "server":"npx json-server db.json -p 3333 -w -d 2000"
   },
   "dependencies": {
     "next": "10.0.1",
