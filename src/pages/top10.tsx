@@ -9,7 +9,7 @@ interface IProduct {
 interface Top10Props{
   products: IProduct[]
 }
-const Top10: React.FC = ({products}: Top10Props) => {
+const Top10 = ({products}: Top10Props) => {
   return (
     <div >
       <Title>Top10</Title>
@@ -22,7 +22,8 @@ const Top10: React.FC = ({products}: Top10Props) => {
           )
         })}
       </ul>
-  </div>)
+    </div>
+  )
 }
 
 export default Top10;
