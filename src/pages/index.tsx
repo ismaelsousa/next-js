@@ -17,7 +17,6 @@ export default function Home({recommendedProducts}:HomeProps) {
    alert( math.sum(3,3))
   },[])
 
-
   return (
   <div>
     <section>
@@ -38,7 +37,7 @@ export default function Home({recommendedProducts}:HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async ()=>{
-  const response = await fetch('http://localhost:3333/recommended') 
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`) 
   const recommendedProducts = await response.json()
   return {
     props:{
